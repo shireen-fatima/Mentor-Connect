@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Link - Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .center-links {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar .center-links a {
+    color: white;
+    padding: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .center-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar .create-account a {
+    color: white;
+    padding: 10px 20px;
+    background-color: #f56a6a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.navbar .create-account a:hover {
+    background-color: #ff4c4c;
+}
+
+        /* Container for Sign Up Section */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .sign-up-section {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .sign-up-section h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <!-- Logo Section on the Left -->
+        <div class="logo">
+            <img src="image/logo.jpeg" alt="Logo">
+            <h2 style="color: white; margin: 0;">Mentor Link</h2>
+        </div>
+
+        <!-- Centered Links Section -->
+        <div class="center-links">
+            <a href="home.html">Home</a>
+            <a href="All Mentors.html">All Mentors</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Create Account Link on the Right -->
+        <div class="create-account">
+            <a href="create-account.html">Create Account</a>
+        </div>
+    </div>
+
+
+    
+
+    <!-- Sign Up Section -->
+    <div class="container">
+        <div class="sign-up-section">
+            <h2>Sign Up</h2>
+            <form id="sign-up-form" method="POST">
+                <div class="form-group">
+                    <label for="sign-up-name">Name:</label>
+                    <input type="text" id="sign-up-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="sign-up-email">Email:</label>
+                    <input type="email" id="sign-up-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="sign-up-password">Password:</label>
+                    <input type="password" id="sign-up-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div id="success-message" class="success-message" style="display:none; color: green; margin-top: 10px;"></div> <!-- Success message box -->
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('sign-up-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+    
+            // Display the success message
+            const successMessage = document.getElementById('success-message');
+            successMessage.textContent = 'Sign up successful! Welcome, ' + document.getElementById('sign-up-name').value + '!';
+            successMessage.style.display = 'block';
+    
+            // Optionally, reset the form
+            this.reset();
+        });
+    </script>
+    
+
+</body>
+</html>

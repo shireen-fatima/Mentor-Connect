@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Link - Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .center-links {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar .center-links a {
+    color: white;
+    padding: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .center-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar .create-account a {
+    color: white;
+    padding: 10px 20px;
+    background-color: #f56a6a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.navbar .create-account a:hover {
+    background-color: #ff4c4c;
+}
+
+        /* Container for Contact Section */
+        .container {
+            display: flex;
+            padding: 40px;
+        }
+
+        /* Left Section: Image */
+        .left-section {
+            flex: 1;
+            text-align: center;
+            padding-right: 20px;
+        }
+
+        .left-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Right Section: Contact Details and Form */
+        .right-section {
+            flex: 1;
+            padding-left: 20px;
+        }
+
+        .right-section h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .right-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .contact-details {
+            margin-bottom: 20px;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <!-- Logo Section on the Left -->
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo">
+            <h2 style="color: white; margin: 0;">Mentor Link</h2>
+        </div>
+
+        <!-- Centered Links Section -->
+        <div class="center-links">
+            <a href="home.html">Home</a>
+            <a href="All Mentors.html">All Mentors</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Create Account Link on the Right -->
+        <div class="create-account">
+            <a href="create-account.html">Create Account</a>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div class="container">
+        <!-- Left Section: Image -->
+        <div class="left-section">
+            <img src="img/person4.jpg" alt="Contact Us Image">
+        </div>
+
+        <!-- Right Section: Contact Details and Form -->
+        <div class="right-section">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <p><strong>Address:</strong> 123 Mentor Link Street, City, Country</p>
+                <p><strong>Email:</strong> contact@mentorlink.com</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            
+            <div id="confirmationMessage" style="display:none; margin-top: 10px; color: green;">
+                Thank you for your message! We will get back to you soon.
+            </div>
+            
+            <script>
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent the form from submitting normally
+            
+                    // Display confirmation message
+                    document.getElementById('confirmationMessage').style.display = 'block';
+            
+                    // Optionally, you can reset the form fields
+                    this.reset();
+                });
+            </script>
+            
+        </div>
+    </div>
+
+</body>
+</html>

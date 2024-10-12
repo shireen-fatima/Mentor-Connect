@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Link - All Mentors</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar .center-links {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .navbar .center-links a {
+            color: white;
+            padding: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar .center-links a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .create-account a {
+            color: white;
+            padding: 10px 20px;
+            background-color: #f56a6a;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .navbar .create-account a:hover {
+            background-color: #ff4c4c;
+        }
+
+        /* Main Content Section */
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        /* Left Section: Fields/Skills */
+        .left-section {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .left-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .field {
+            padding: 10px;
+            background-color: #f3f3f3;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .field:hover {
+            background-color: #ddd;
+        }
+
+        .field.selected {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        /* Right Section: Mentors */
+        .right-section {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .mentor-card {
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .mentor-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .mentor-card h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .mentor-card p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <!-- Logo Section on the Left -->
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo">
+            <h2 style="color: white; margin: 0;">Mentor Link</h2>
+        </div>
+
+        <!-- Centered Links Section -->
+        <div class="center-links">
+            <a href="home.html">Home</a>
+            <a href="All Mentors.html">All Mentors</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Create Account Link on the Right -->
+        <div class="create-account">
+            <a href="create-account.html">Create Account</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Section: Fields/Skills -->
+        <div class="left-section">
+            <h2>Fields</h2>
+            <div class="field" data-field="software-engineering">Software Engineering</div>
+            <div class="field" data-field="data-science">Data Science</div>
+            <div class="field" data-field="product-management">Product Management</div>
+            <div class="field" data-field="design">Design</div>
+        </div>
+
+        <!-- Right Section: Mentors -->
+<div class="right-section">
+    <div class="mentor-card" data-field="software-engineering">
+        <a href="mentor-detail1.html?img=image/person1.jpeg&name=John%20Doe">
+            <img src="img/person1.jpg" alt="Mentor 1">
+            <h3>John Doe</h3>
+            <p>Software Engineer</p>
+        </a>
+    </div>
+    <div class="mentor-card" data-field="data-science">
+        <a href="mentor-detail2.html?img=image/person2.jpeg&name=Jane%20Smith">
+            <img src="img/person2.jpg" alt="Mentor 2">
+            <h3>Jane Smith</h3>
+            <p>Data Scientist</p>
+        </a>
+    </div>
+    <div class="mentor-card" data-field="product-management">
+        <a href="mentor-detail3.html?img=image/person3.jpeg&name=Sarah%20Wilson">
+            <img src="img/person3.jpg" alt="Mentor 3">
+            <h3>Sarah Wilson</h3>
+            <p>Product Manager</p>
+        </a>
+    </div>
+        <div class="mentor-card" data-field="design">
+        <a href="mentor-detail4.html?img=image/person4.jpeg&name=Michael%20Lee">
+            <img src="img/person5.jpg" alt="Mentor 4">
+            <h3>Michael Lee</h3>
+            <p>UX Designer</p>
+        </a>
+    </div>
+</div>
+
+    <!-- JavaScript for Filtering and Mentor Detail -->
+    <script>
+        const fields = document.querySelectorAll('.field');
+        const mentorCards = document.querySelectorAll('.mentor-card');
+
+        fields.forEach(field => {
+            field.addEventListener('click', function() {
+                const selectedField = field.getAttribute('data-field');
+
+                // Toggle selection
+                if (field.classList.contains('selected')) {
+                    field.classList.remove('selected');
+                    mentorCards.forEach(card => card.style.display = 'flex');
+                } else {
+                    fields.forEach(f => f.classList.remove('selected'));
+                    field.classList.add('selected');
+                    mentorCards.forEach(card => {
+                        if (card.getAttribute('data-field') === selectedField) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+
+        function openMentorDetail(mentorId) {
+            window.location.href = `mentor-detail.html?mentor=${mentorId}`;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Link - Mentor Details</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .navbar .center-links {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+        .navbar .center-links a {
+            color: white;
+            padding: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar .center-links a:hover {
+            text-decoration: underline;
+        }
+         
+        .navbar .create-account a {
+            color: white;
+            padding: 10px 20px;
+            background-color: #f56a6a;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .navbar .create-account a:hover {
+            background-color: #ff4c4c;
+        }
+        .container {
+            display:flex;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .details-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .details-section img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .details-section h2 {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+        .details-section p {
+            font-size: 18px;
+            color: #555;
+        }
+        .success-message {
+            display: none;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .booking-section {
+            margin-top: 30px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .booking-section h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .booking-section label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .booking-section input[type="datetime-local"] {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .booking-section button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .booking-section button:hover {
+            background-color: #45a049;
+        }
+        .time-slots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .time-slot {
+            padding: 10px;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100px;
+            text-align: center;
+        }
+        .time-slot.selected {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <!-- Logo Section on the Left -->
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo">
+            <h2 style="color: white; margin: 0;">Mentor Link</h2>
+        </div>
+
+        <!-- Centered Links Section -->
+        <div class="center-links">
+            <a href="home.html">Home</a>
+            <a href="All Mentors.html">All Mentors</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Create Account Link on the Right -->
+        <div class="create-account">
+            <a href="create-account.html">Create Account</a>
+        </div>
+    </div>
+    
+    <!-- Mentor Details Section -->
+    <div class="container">
+        <div class="details-section">
+            <img id="img/person1.jpg" src="img/person1.jpg" alt="Mentor Image">
+            <h2 id="mentor-name">JOHN DOE</h2>
+            <p id="mentor-details"><ul>
+                <li>Mentor's Name : John Doe</li><br>
+                <li>Designation   : Software Engineer/ Technical Lead</li><br>
+                <li>Bio : John is a seasoned software engineer with over 10 years
+                     of experience in full-stack development.                     He specializes in building scalable web applications using React and Node.js.</li><br>
+                <li>Experience    : 8+ years in software development</li><br>
+                <li>Expertise     : 
+                    <ol>
+                        <li> Programming languages  : Java, Python, C++, JavaScript</li>
+                        <li> Development frameworks : Spring, Django, React</li>
+                        <li> Databases              : MySQL, MongoDB, PostgreSQL</li>
+                        <li> Operating Systems      : Windows, Linux, macOS</li>
+                        <li> Agile methodologies    : Scrum, Kanban</li></ol></li><br>                
+                <li>Mentorship Focus :               
+                    <ol><li> Software design patterns and principles</li>
+                        <li> Code review and refactoring</li>
+                        <li> Problem-solving strategies</li>
+                        <li> Technical communication and collaboration</li>
+                        <li> Career development and industry trends</li></ol></li><br>
+                <li>Mentorship Style :    
+                    <ol><li> Guided coding sessions  </li>  
+                        <li>  Regular feedback and constructive criticism   </li> 
+                        <li>  Real-world project-based learning    </li>
+                        <li>  Interactive discussions and Q&A </li>   
+                        <li> Personalized learning plans</li></ol></li><br>
+                <li>Availability :                    
+                    <ol><li>Weekly 1-on-1 sessions (30 minutes)</li>     
+                        <li>Bi-weekly group sessions (60 minutes)  </li>   
+                        <li> Email/Chat support for quick questions</li></ol></li><br>
+                <li>Expectations :    
+                    <ol><li>Set clear goals and objectives</li>    
+                        <li>Active participation and engagement</li>     
+                        <li>Open communication and feedback </li>    
+                        <li>Commitment to learning and growth</li>    
+                        <li>Respectful and professional demeanor</li> </li> </li><br>
+                    </ol>   
+                <li>Contact Details :    
+                    <ol><li> Linkedin : https://www.linkedin.com/in/johndoe</li>
+                        <li>Email : johndoe@example.com</li>
+                        <li> Phone Number : ........</li></ol></li><br>
+            </ul>              
+                </p>
+            </div>
+
+        <!-- Booking Section -->
+        <div class="booking-section">
+            <h3>Book an Appointment</h3>
+            <div class="time-slots" id="time-slots">
+                <div class="time-slot">09:00 AM</div>
+                <div class="time-slot">10:00 AM</div>
+                <div class="time-slot">11:00 AM</div>
+            </div>
+            <label for="booking-date">Select Date </label>
+            <input type="date" id="booking-date" name="booking-date"><br><br>
+            <button type="submit">Book Appointment</button>
+            <div id="success-message" class="success-message"></div> <!-- Success message box -->
+        </div>
+
+    <!-- JavaScript for Details Page -->
+    <script>
+        const timeSlotsContainer = document.getElementById('time-slots');
+        let selectedTimeSlot = null;
+
+        // Add event listeners to time slots
+        document.querySelectorAll('.time-slot').forEach(slot => {
+            slot.addEventListener('click', function() {
+                if (selectedTimeSlot) {
+                    selectedTimeSlot.classList.remove('selected');
+                }
+                this.classList.add('selected');
+                selectedTimeSlot = this;
+            });
+        });
+
+        // Handle form submission
+        document.querySelector('button[type="submit"]').addEventListener('click', function(event) {
+            event.preventDefault();
+            const selectedDateTime = document.getElementById('booking-date').value;
+
+            if (selectedTimeSlot) {
+                const selectedSlotTime = selectedTimeSlot.textContent;
+                const successMessage = `Appointment booked with ${document.getElementById('mentor-name').textContent} on ${selectedDateTime} at ${selectedSlotTime}`;
+                
+                const messageBox = document.getElementById('success-message');
+                messageBox.textContent = successMessage;
+                messageBox.style.display = 'block';
+
+                // Reset fields
+                document.getElementById('booking-date').value = '';
+                selectedTimeSlot.classList.remove('selected');
+                selectedTimeSlot = null;
+            } else {
+                alert('Please select a time slot.');
+            }
+        });
+    </script>
+
+</body>
+</html>

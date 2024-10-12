@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Link - Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .center-links {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.navbar .center-links a {
+    color: white;
+    padding: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar .center-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar .create-account a {
+    color: white;
+    padding: 10px 20px;
+    background-color: #f56a6a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.navbar .create-account a:hover {
+    background-color: #ff4c4c;
+}
+
+        /* Hero Section */
+        .hero {
+            background-color: #4caf50;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .hero .cta-button {
+            padding: 15px 30px;
+            background-color: white;
+            color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .cta-button:hover {
+            background-color: #ff4c4c;
+            color: white;
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #555;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Featured Mentors Section */
+        .featured-mentors {
+            padding: 50px 20px;
+            background-color: #f3f3f3;
+        }
+
+        .featured-mentors h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .mentors-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .mentor-card {
+            width: 200px;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mentor-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .mentor-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .testimonial h4 {
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+   <!-- Navbar Section -->
+   <div class="navbar">
+    <!-- Logo Section on the Left -->
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Logo">
+        <h2 style="color: white; margin: 0;">Mentor Link</h2>
+    </div>
+
+    <!-- Centered Links Section -->
+    <div class="center-links">
+        <a href="home.html">Home</a>
+        <a href="All Mentors.html">All Mentors</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Create Account Link on the Right -->
+    <div class="create-account">
+        <a href="create-account.html">Create Account</a>
+    </div>
+</div>
+
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to Mentor Link</h1>
+        <p>Your journey to success begins with the right mentor.</p>
+        <button class="cta-button" id="get-started-button">Get Started</button>
+    </div>
+    
+    <script>
+        document.getElementById('get-started-button').addEventListener('click', function() {
+            window.location.href = 'create-account.html'; // Replace with your create account page URL
+        });
+    </script>
+    
+
+    <!-- About Section -->
+    <div class="about">
+        <h2>About Mentor Link</h2>
+        <p>At Mentor Link, we connect aspiring professionals with experienced mentors in various fields. Whether you're just starting your career or looking for guidance to advance, our mentors are here to help you achieve your goals.</p>
+    </div>
+
+    <!-- Featured Mentors Section -->
+    <div class="featured-mentors">
+        <h2>Featured Mentors</h2>
+        <div class="mentors-list">
+            <div class="mentor-card">
+                <img src="img/person1.jpg" alt="Mentor 1">
+                <h3>John Doe</h3>
+                <p>Software Engineer</p>
+            </div>
+            <div class="mentor-card">
+                <img src="img/person2.jpg" alt="Mentor 2">
+                <h3>Jane Smith</h3>
+                <p>Data Scientist</p>
+            </div>
+            <div class="mentor-card">
+                <img src="img/person3.jpg" alt="Mentor 3">
+                <h3>Sarah Wilson</h3>
+                <p>Product Manager</p>
+            </div>
+            <div class="mentor-card">
+                <img src="img/person5.jpg" alt="Mentor 4">
+                <h3>Michael Lee</h3>
+                <p>UX Designer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>"Mentor Link connected me with a mentor who helped me navigate my career path. I couldn't be more grateful!"</p>
+            <h4>- Sarah Wilson</h4>
+        </div>
+    </div>
+
+</body>
+</html>
